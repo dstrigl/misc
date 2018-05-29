@@ -10,7 +10,7 @@ BindsTo=dev-video0.device
 After=network-online.target
 
 [Service]
-ExecStart=/usr/local/bin/mjpg_streamer -i "input_uvc.so -r 720x480 -q 100 -y -d /dev/video0" -o "output_http.so -p 9090 -w /usr/local/share/mjpg-streamer/www -c admin:instar"
+ExecStart=/usr/local/bin/mjpg_streamer -i "input_uvc.so -r 720x480 -q 100 -y -d /dev/video0" -o "output_http.so -p 9090 -w /usr/local/share/mjpg-streamer/www -c admin:admin"
 
 [Install]
 WantedBy=multi-user.target
