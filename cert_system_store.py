@@ -29,9 +29,8 @@ def slugify(text, separator="_"):
 
 
 if os.name == "nt":
-    # for storename in ("ROOT", "CA", "MY"):
     cnt = 0
-    for storename in ("ROOT", "CA"):
+    for storename in ("ROOT", "CA", "MY"):
         with wincertstore.CertSystemStore(storename) as store:
             for cert in store.itercerts(usage=wincertstore.SERVER_AUTH):
 
